@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Welcome from "./components/Welcome";
+import EjeReducer from "./components/Widgets/EjeReducer";
+import { EjeEffect } from "./components/Widgets/EjeUseEffect";
+import CheckBox from "./components/Widgets/CheckBox";
+import RadioButton from "./components/Widgets/RadioButton";
+import { InputDate } from "./components/Widgets/InputDate";
+import { InputText } from "./components/Widgets/InputText";
+import { InputTextArea } from "./components/Widgets/InputTextArea";
+import { InputSlider } from "./components/Widgets/InputSlider";
 
-function App() {
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Bienvenido</h1>
+      <Welcome />        
+     {/*  <EjeReducer />     
+      <EjeEffect />   
+      <br />*/}
+      <CheckBox label="rojo"/>   
+      <CheckBox label="azul"/>   
+      <br /> <br />
+      {/* <InputDate  label={"holis"}/> */}
+      <RadioButton/> 
+      <RadioButton/> 
+      <RadioButton/> 
+      <InputDate/>
+      <InputText label="ingrese su nombre"/>
+      <InputTextArea PlaceHolder="Escriba algo" Cols={100} Rows={14} />
+      <InputSlider Max={10} Min={0} Label="Holis"/>
+
+           
     </div>
   );
-}
+};
 
 export default App;
