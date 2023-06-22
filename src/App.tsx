@@ -29,6 +29,8 @@ const App: React.FC = () => {
       <InputText label="ingrese su nombre"/>
       <InputTextArea PlaceHolder="Escriba algo" Cols={100} Rows={14} />
       <InputSlider Max={10} Min={0} Label="Holis"/>
+      <br />
+      
 
            
     </div>

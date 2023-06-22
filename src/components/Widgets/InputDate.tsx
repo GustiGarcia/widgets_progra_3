@@ -20,21 +20,24 @@ interface InputProps {
   );
 }; */
 
+export const InputDate: React.FC = () => {
+  const [date, setDate] = useState<string | undefined>(undefined);
 
-export const InputDate: React.FC=()=> {
-  const [date, setDate] = useState<string>();
-
-  useEffect(()=>{
-    console.log('se eligio la fecha ',{date});
+  useEffect(() => {
+    if (date !== undefined) {
+      console.log("se eligio la fecha ", { date });
+    }
   }, [date]);
-
 
   return (
     <>
-    <h3> seleccionar Fecha</h3>
-    <br />
-    <input type="date" value={date} onChange={(e)=> setDate(e.target.value)} />
+      <h3> seleccionar Fecha</h3>
+      <br />
+      <input
+        type="date"
+        value={date || ""}
+        onChange={(e) => setDate(e.target.value)}
+      />
     </>
   );
 };
-
