@@ -35,7 +35,7 @@ const RadioButton: React.FC = ()=> {
   return(
     <label>
       <input type="radio" 
-      defaultChecked={radioButton}
+      checked={radioButton}
       onClick={marca} />
     </label>
   )

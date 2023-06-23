@@ -8,7 +8,9 @@ import { InputDate } from "./components/Widgets/InputDate";
 import { InputText } from "./components/Widgets/InputText";
 import { InputTextArea } from "./components/Widgets/InputTextArea";
 import { InputSlider } from "./components/Widgets/InputSlider";
-
+import { ColorChange } from "./components/Widgets/ColorChanger";
+import { ColorChangerCheck } from "./components/Widgets/ColorChangerCheckBox";
+import { SwitchButton } from "./components/Widgets/SwitchButton";
 
 const App: React.FC = () => {
   return (
@@ -28,8 +30,11 @@ const App: React.FC = () => {
       <InputDate/>
       <InputText label="ingrese su nombre"/>
       <InputTextArea PlaceHolder="Escriba algo" Cols={100} Rows={14} />
-      <InputSlider Max={10} Min={0} Label="Holis"/>
+      <InputSlider Max={10} Min={0} Label="Barra"/>
+ 
+      <ColorChangerCheck />
       <br />
+      <SwitchButton/>
       
 
            

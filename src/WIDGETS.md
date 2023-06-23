@@ -9,5 +9,4 @@ Widgets para realizar
 -Input text _V_
 -Input text tarea _V_
 -Radio Button _V_
--switch button
-
+-switch button _V_
