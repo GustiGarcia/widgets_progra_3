@@ -7,14 +7,17 @@ export const SwitchButton: React.FC = () => {
     setisChecked(!isChecked)};
 
     return (
-      <label className="switch">
-        <input type="checkbox" 
-        checked={isChecked}
-        onChange={handleCheckBox}
-        className="switch-input"
-        />
-        <span className="switch-slider round"></span>
-      </label>
+      <div className="mb-3">
+        Encender Wi-Fi  
+        <label className="switch">
+          <input type="checkbox" 
+          checked={isChecked}
+          onChange={handleCheckBox}
+          className="switch-input"
+          />
+          <span className="switch-slider round"></span>
+        </label>
+      </div>
     );
   };
 

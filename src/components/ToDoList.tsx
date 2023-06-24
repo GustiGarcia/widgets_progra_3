@@ -49,14 +49,14 @@ const TodoList: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>Todo List</h1>
-      <input type="text" value={inputValue} onChange={handleInputChange} />
-      <button onClick={handleAddTodo}>Add Todo</button>
+    <div className="container">
+      <h2>To-Do List</h2>
+      <input className="form-control" type="text" value={inputValue} onChange={handleInputChange} placeholder="Ingrese la tarea"/>
+      <button className="btn btn-primary m-1" onClick={handleAddTodo}>Add Todo</button>
 
-      <ul>
+      <ul className="list-group">
         {todos.map((todo) => (
-          <li key={todo.id}>
+          <li className="list-group-item d-flex justify-content-between" key={todo.id}>
             <span
               style={{
                 textDecoration: todo.completed ? "line-through" : "none",
@@ -65,7 +65,7 @@ const TodoList: React.FC = () => {
             >
               {todo.text}
             </span>
-            <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+            <button className="btn btn-danger m-1" onClick={() => handleDeleteTodo(todo.id)}>Tarea Lista</button>
           </li>
         ))}
       </ul>

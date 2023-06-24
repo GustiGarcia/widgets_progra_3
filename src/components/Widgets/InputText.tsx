@@ -28,16 +28,17 @@ export const InputText: React.FC<InputProps> = ({ label }) => {
 
   return (
     <>
-      <br />
-      {label}
-      <br />
-      <input type="text" value={text} onChange={handleInput}/>
-      <br />
-      <button onClick={handleClear}> Limpiar </button>
-      <button onClick={handleSend}> Enviar </button>
-      <button onClick={handleShowText}>Mostrar</button>
-      <br />
-      <span>{displayText}</span>
+      <div>
+        {label}
+        
+        <input className="form-control" type="text" value={text} onChange={handleInput}/>
+        
+        <button className="btn btn-danger m-1" onClick={handleClear}> Limpiar </button>
+        <button className="btn btn-primary m-1" onClick={handleSend}> Enviar </button>
+        <button className="btn btn-secondary m-1"onClick={handleShowText}>Mostrar</button>
+        
+        <span>{displayText}</span>
+      </div>
     </>
   );
 };

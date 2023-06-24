@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 /* //cambiar , esta bien pero mal encarado
 interface InputProps {
   label: string;
@@ -31,13 +32,14 @@ export const InputDate: React.FC = () => {
 
   return (
     <>
-      <h3> seleccionar Fecha</h3>
-      <br />
-      <input
-        type="date"
-        value={date || ""}
-        onChange={(e) => setDate(e.target.value)}
-      />
+      <div className="container">
+        <h4>Seleccionar Fecha</h4>
+        <input
+          type="date"
+          value={date || ""}
+          onChange={(e) => setDate(e.target.value)}
+        />
+      </div>
     </>
   );
 };

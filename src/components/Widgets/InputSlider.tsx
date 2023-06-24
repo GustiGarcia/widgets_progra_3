@@ -14,12 +14,10 @@ export const InputSlider: React.FC<SliderProps> = ({ Min, Max, Label }) => {
   };
 
   return (
-    <div>
-      <br />
+    <div className="container">
       <label>{Label}</label>
-      <br />
       <input type="range" min={Min} max={Max} value={slider} onChange={(e)=>setSlider (Number(e.target.value))}/>
-      <button onClick={handleCheckBox}>Reset</button>
+      <button className="btn btn-primary m-1" onClick={handleCheckBox}>Reset</button>
     </div>
   );
 };

@@ -1,45 +1,38 @@
 import React from 'react';
-import Welcome from "./components/Welcome";
-import EjeReducer from "./components/Widgets/EjeReducer";
-import { EjeEffect } from "./components/Widgets/EjeUseEffect";
 import CheckBox from "./components/Widgets/CheckBox";
 import RadioButton from "./components/Widgets/RadioButton";
 import { InputDate } from "./components/Widgets/InputDate";
 import { InputText } from "./components/Widgets/InputText";
 import { InputTextArea } from "./components/Widgets/InputTextArea";
 import { InputSlider } from "./components/Widgets/InputSlider";
-import { ColorChange } from "./components/Widgets/ColorChanger";
-import { ColorChangerCheck } from "./components/Widgets/ColorChangerCheckBox";
-import { SwitchButton } from "./components/Widgets/SwitchButton";import { ColorChanger } from './components/ColorChanger';
-
+import { SwitchButton } from "./components/Widgets/SwitchButton";
+import TodoList from './components/ToDoList';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>Bienvenido</h1>
-      <Welcome />        
-     {/*  <EjeReducer />     
-      <EjeEffect />   
-      <br />*/}   
-      <br /> <br />
-      {/* <InputDate  label={"holis"}/> */}
-      <RadioButton/> 
-      <RadioButton/> 
-      <RadioButton/> 
+    <div className='container bg-light'>
+      <h1 style={{textAlign:"center"}}>Bienvenido al TP1 - Programación III - IES 9-023</h1>
+      <h5 style={{textAlign:"center"}}>Avila, Juan Pablo / García, Gustavo / Maldonado, Franco</h5>
+      <TodoList/>
+      <hr />
       <CheckBox label="red"/>   
       <CheckBox label="blue"/>
       <CheckBox label="yellow"/>
+      <hr />
       <InputDate/>
-      <InputText label="ingrese su nombre"/>
-      <InputTextArea PlaceHolder="Escriba algo" Cols={100} Rows={14} />
-      <InputSlider Max={10} Min={0} Label="Barra"/>
- 
-      <ColorChangerCheck />
-      <br />
+      <hr />
+      <InputSlider Max={10} Min={0} Label="Slider"/>
+      <hr />
+      <InputText label="Ingrese su Nombre"/>
+      <hr />
+      <InputTextArea PlaceHolder="Escriba algo" Cols={50} Rows={10} />
+      <hr />
+      <RadioButton label='Opción 1'/> 
+      <RadioButton label='Opción 2'/> 
+      <RadioButton label='Opción 3'/> 
+      <hr />
       <SwitchButton/>
-      
-
-           
     </div>
   );
 };
