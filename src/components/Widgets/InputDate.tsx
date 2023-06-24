@@ -22,10 +22,11 @@ interface InputProps {
 
 
 export const InputDate: React.FC=()=> {
-  const [date, setDate] = useState<string>();
+  const [date, setDate] = useState<string | undefined> (undefined);
 
   useEffect(()=>{
-    console.log('se eligio la fecha ',{date});
+    if (date !== undefined) 
+    {console.log('se eligio la fecha ',{date});}
   }, [date]);
 
 
