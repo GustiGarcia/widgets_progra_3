@@ -8,6 +8,8 @@ import { InputSlider } from "./components/Widgets/InputSlider";
 import { SwitchButton } from "./components/Widgets/SwitchButton";
 import TodoList from './components/ToDoList';
 import 'bootstrap/dist/css/bootstrap.css';
+import { DropDown } from './components/Widgets/DropDown';
+import { ButtonGroupWid } from './components/Widgets/ButtonGroupWid';
 
 const App: React.FC = () => {
   return (
@@ -33,6 +35,10 @@ const App: React.FC = () => {
       <RadioButton label='Opción 3'/> 
       <hr />
       <SwitchButton/>
+      <hr/>
+      <DropDown/>
+      <hr/>
+      <ButtonGroupWid/>
     </div>
   );
 };
